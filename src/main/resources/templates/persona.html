@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Persona</title>
+    </head>
+    <body>
+        <h1 th:text="${titulo}"></h1>
+        <table class="table talbe-dark table-striped">
+            
+            <thead class=""thead-dark">
+                <tr>
+                    <th scope="cool">Nombre </th>
+                    <th scope="cool">Apellido 1 </th>
+                    <th scope="cool">Apellido 2 </th>
+                     <th scope="cool">Email </th>
+                     <th scope="cool">Telefono </th>
+                     <th scope="cool">Pais </th>
+                     <th scope="cool">Editar </th>
+                     <th scope="cool">Eliminar </th>
+                         
+                </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="user : ${persona}">
+                <tr>
+                    <td th:text="${ser.getNombre}"></td>
+                    <td th:text="${ser.getApellido1}"></td>
+                    <td th:text="${ser.getApellido2}"></td>
+                    <td th:text="${ser.getEmail}"></td>
+                    <td th:text="${ser.getTelefono}"></td>
+                     <td th:text="${ser.getPais.getPais}"></td>
+                     <td>
+                         <a href="@{/editPersona/{id}(id=${user.getId})}">Edit</a>
+                     </td>
+                     <td>
+                         <a href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                     </td>
+                </tr>
+            </th:block>    
+        </tbody>
+            
+        </table>
+        <div>
+            
+            
+            
+        </div>
+    </body>
+</html>
