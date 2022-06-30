@@ -4,6 +4,7 @@
  */
 package com.tienda.service;
 
+import com.tienda.entity.Pais;
 import java.util.List;
 
 /**
@@ -12,6 +13,6 @@ import java.util.List;
  */
 
 
-public class IPaisService {
+public interface IPaisService {
     public List<Pais> listCountry();
 }

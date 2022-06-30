@@ -4,7 +4,7 @@
  */
 package com.tienda.service;
 
-import com.tienda.entity.persona;
+import com.tienda.entity.Persona;
 import com.tienda.repository.PersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,24 +14,25 @@ import org.springframework.stereotype.Service;
  *
  * @author Diego Segura Vega
  */
+@Service
 public class PersonaService implements IPersonaService {
     
-    @Service
+
     @Autowired
     private PersonaRepository personaRepository;
     
     @Override
-    public List<persona> getAllPersona() {
-        return (List<persona>)personaRepository.findAll();
+    public List<Persona> getAllPersona() {
+        return (List<Persona>)personaRepository.findAll();
     }
 
     @Override
-    public Object getPersonaById(long id) {
-       return personaRepository.findById(id).erElse(null);
+    public Persona getPersonaById(long id) {
+       return personaRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void savePersona(persona persona) {
+    public void savePersona(Persona persona) {
         personaRepository.save(persona);
     }
 

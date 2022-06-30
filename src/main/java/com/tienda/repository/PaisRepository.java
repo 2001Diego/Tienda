@@ -9,7 +9,7 @@
  * @author Diego Segura Vega
  */
 package com.tienda.repository;
-import com.tienda.entity.persona;
+import com.tienda.entity.Pais;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.CrudRepository;
 
@@ -18,7 +18,7 @@ import org.springframework.data.repository.CrudRepository;
  * @author Diego Segura Vega
  */
 @Repository
-public interface PaisRepository extends CrudRepository<persona,Long> {
+public interface PaisRepository extends CrudRepository<Pais,Long> {
     
 }
 

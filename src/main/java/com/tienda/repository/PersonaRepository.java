@@ -10,7 +10,7 @@
  */
 package com.tienda.repository;
 
-import com.tienda.entity.persona;
+import com.tienda.entity.Persona;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
  * @author Diego Segura Vega
  */
 @Repository
-public interface PersonaRepository extends CrudRepository<persona,Long> {
+public interface PersonaRepository extends CrudRepository<Persona,Long> {
 
     public void deleteById(long id);
 

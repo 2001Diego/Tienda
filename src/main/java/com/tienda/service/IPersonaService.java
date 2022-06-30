@@ -11,12 +11,13 @@
 
 package com.tienda.service;
 
-import com.tienda.entity.persona;
+import com.tienda.entity.Persona;
+
 import java.util.List;
 
 public interface IPersonaService {
-    public List<persona> getAllPersona();
-    public persona getPersonaById (long id);
-    public void savePersona (persona persona);
+    public List<Persona> getAllPersona();
+    public Persona getPersonaById (long id);
+    public void savePersona (Persona persona);
     public void delete (long id);
 }
